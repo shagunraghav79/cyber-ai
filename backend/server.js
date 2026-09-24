@@ -6,7 +6,11 @@ const mongoose = require("mongoose");
 const gemini = require("./config/gemini");
 const scannerRoutes = require("./routes/url");
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://cyber-ai-inky.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 app.use(express.json());
 app.use("/api/url", scannerRoutes);
