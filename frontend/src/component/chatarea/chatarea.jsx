@@ -146,7 +146,7 @@ const Chatarea = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/ask", {
+      const response = await fetch("https://cyber-ai-8pf5.vercel.app/api/ask", {
         method: "POST",
 
         headers: {
