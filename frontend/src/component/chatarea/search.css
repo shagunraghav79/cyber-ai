@@ -1,0 +1,117 @@
+.search-box {
+  width: 700px;
+  min-height: 60px;
+  max-height: 220px;
+  background: rgb(61, 70, 80);
+  border-radius: 25px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 15px;
+  box-sizing: border-box;
+
+  position: absolute;
+  bottom: 0.1px;
+}
+
+/* TEXT AREA */
+
+
+.search-input {
+  flex: 1;
+ min-height: 35px;
+max-height: 196px;
+
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  line-height: 1.5;
+  resize: none;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+/* ACTION BUTTONS */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions button {
+  border: none;
+  background: transparent;
+  color: white;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.actions button:last-child {
+  background: white;
+  color: black;
+}
+.input-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.selected-file {
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.selsectedfile-cancel{
+   border: none;
+  background: transparent;
+  color: white;
+
+  width: 30px;
+  height: 30px;
+
+  font-size: 20px;
+  cursor: pointer;
+}
+/* Tablets */
+@media (max-width: 900px) {
+  .search-box {
+    width: 90vw;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .search-box {
+    width: 92vw;
+    min-height: 55px;
+    padding: 10px 12px;
+    border-radius: 20px;
+  }
+
+  .search-input {
+    font-size: 16px;
+    padding: 5px 6px;
+  }
+
+  .actions button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}

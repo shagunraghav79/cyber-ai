@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full{
+    display: flex;
+}
+.sidebar{
+    width: 250px;
+    background-color: #000F1D;
+    height: 100vh;
+}
+.sidebar-header{
+    width: 100%;
+    height: 12vh;
+    background-color: #000F1D;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+   padding: 0 10px;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+}
+.slidebar{
+    color: #fff;
+}
+.sidebar-options{
+    width: 100%;
+    height: 76vh;
+    color: #fff;
+    padding: 12px;
+}
+
+ .newchat {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.newchat p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 15px;
+}
+
+.newchat svg {
+    font-size: 20px;
+}
+
+.newchat:hover {
+    background-color: #2f2f2f;
+}
+  
+
+.tool {
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.tool p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 15px;
+}
+
+.tool svg {
+    font-size: 20px;
+}
+
+.tool:hover {
+    background-color: #2f2f2f;
+}
+
+
+.news {
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.news p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 15px;
+}
+
+.news svg {
+    font-size: 20px;
+}
+
+.news:hover {
+    background-color: #2f2f2f;
+}
+
+.history {
+    margin-top: 15px;
+    
+}
+
+.history-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.history-heading svg {
+    font-size: 19px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 5px;
+    padding-left: 25px;
+    max-height: 50vh;
+    overflow-y: auto;
+   
+    scrollbar-width: 10px;
+    scrollbar-color: #3a4a58 transparent;
+}
+
+/* Individual chat */
+.history-chat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 9px 10px;
+    margin: 0 8px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    min-width: 0;
+    transition: background-color 0.2s ease;
+}
+
+.history-chat:hover {
+    background-color: #2f2f2f;
+}
+
+.active-chat {
+    background-color: #343434;
+}
+
+/* Chat title */
+.history-chat > p {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-size: 14px;
+}
+
+/* Rename + delete */
+.chat-actions {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+/* Buttons */
+.chat-rename,
+.chathistory-delete {
+    border: none;
+    background: transparent;
+    color: #999;
+
+    cursor: pointer;
+
+    padding: 4px 6px;
+    border-radius: 5px;
+
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+/* Show buttons when chat is hovered */
+.history-chat:hover .chat-rename,
+.history-chat:hover .chathistory-delete {
+    opacity: 1;
+}
+
+.chat-rename:hover,
+.chathistory-delete:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Rename input */
+.chat-rename-input {
+    flex: 1;
+    min-width: 0;
+
+    background: #222;
+    color: white;
+
+    border: 1px solid #666;
+    border-radius: 5px;
+
+    padding: 6px 8px;
+
+    outline: none;
+    font-size: 14px;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 10px 8px;
+}
+
+.profile {
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.profile p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+
+    margin: 0;
+    font-size: 25px;
+}
+
+.profile svg {
+    font-size: 20px;
+}
+
+.profile:hover {
+    background-color: #2f2f2f;
+}
+.mobile-sidebar-btn {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+     
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+
+        z-index: 1000;
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+
+    .slidebar {
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .full {
+        width: 100%;
+    }
+    .mobile-sidebar-btn {
+        display: flex;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+
+        width: 40px;
+        height: 40px;
+
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        border-radius: 8px;
+        background:none;
+        color: white;
+
+        font-size: 20px;
+        cursor: pointer;
+
+        z-index: 2000;
+    }
+
+    .full:has(.sidebar.sidebar-open) .mobile-sidebar-btn {
+    display: none;
+    }
+}

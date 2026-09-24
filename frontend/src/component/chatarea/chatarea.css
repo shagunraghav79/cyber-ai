@@ -1,0 +1,236 @@
+/* The main wrapper of your chat */
+.chatarea {
+    border: 2px solid gray;
+    width: 83.7vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Header */
+.chatarea-header {
+    height: 8vh;
+    background-color: #000F1D;
+    color: rgb(247, 172, 86);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+.chatarea-typearea {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+.chatarea-response {
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    background-color: #000F1D;
+    color: aliceblue;
+    position: relative;
+}
+.chat-container{
+    width: 100%;
+    max-width: 85vw;
+    height: 75vh;
+    overflow-y: scroll;
+    scrollbar-width: 10px;
+    scrollbar-color: #3a4a58 transparent;
+}
+.messages {
+    flex: 1;
+    width: 100%;
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+.message {
+  align-self: flex-end;
+  max-width: 70%;
+  padding: 10px 16px;
+  background: #2f2f2f;
+  border-radius: 18px 18px 4px 18px;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+   
+} 
+.message.user {
+    align-self: flex-end;
+    background: #2f2f2f;
+    border-radius: 18px 18px 4px 18px;
+}
+
+.message.ai {
+    align-self: flex-start;
+    background: #00223f;
+    border-radius: 18px 18px 18px 4px;
+    max-width: 85%;
+}
+
+.message.ai p {
+    margin: 0 0 12px 0;
+}
+
+.message.ai h1,
+.message.ai h2,
+.message.ai h3 {
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.message.ai ul,
+.message.ai ol {
+    margin: 8px 0 12px 20px;
+    padding-left: 15px;
+}
+
+.message.ai li {
+    margin-bottom: 6px;
+}
+
+.message.ai strong {
+    font-weight: 700;
+}
+
+.message.ai a {
+    color: #6cb6ff;
+    text-decoration: underline;
+}
+
+.message.ai hr {
+    border: none;
+    border-top: 1px solid #3a4a58;
+    margin: 18px 0;
+}
+.space {
+    height: 1px;
+    background-color: gray;
+}
+
+/* Footer (input area) */
+.chatarea-footer {
+     background-color: #000F1D;
+     height: 6vh;
+     color: #3a4a58;
+     justify-content: center;
+     align-items: center;
+     display: flex;
+     box-sizing: border-box;
+}
+.message-image {
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.file-attachment {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  display: inline-block;
+  font-size: 14px;
+  color: black;
+}
+.mermaid-diagram {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 15px 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* AI TYPING ANIMATION */
+
+.loading-message {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    min-width: 60px;
+    padding: 12px 16px;
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 18px;
+}
+
+.typing-indicator span {
+    width: 7px;
+    height: 7px;
+    background-color: #9aa7b2;
+    border-radius: 50%;
+    display: block;
+    animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    30% {
+        transform: translateY(-5px);
+        opacity: 1;
+    }
+}
+@media (max-width: 1024px) {
+
+    .chatarea {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+    }
+
+    .chatarea-response {
+        height: 86vh;
+    }
+
+    .chat-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .messages {
+        width: 100%;
+        max-width: 900px;
+        padding: 15px;
+    }
+
+    .chatarea-typearea {
+        width: 100%;
+    }
+}

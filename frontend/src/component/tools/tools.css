@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tools {
+  width: 83.7vw;
+  min-height: 100vh;
+  background-color: #000F1D;
+  color: white;
+  padding: 40px;
+  overflow-y: auto;
+  border: 2px solid gray;
+}
+
+.title {
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.tools-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgb(247, 172, 86);
+}
+
+/* Tool cards */
+
+.url-scanner,
+.email-cheacker,
+.ip-tracker,
+.password-strength,
+.app-cheacker {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  margin: 15px auto;
+  padding: 22px 25px;
+
+  background-color: #00223f;
+  border: 1px solid #183b55;
+  border-radius: 14px;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  /* Fix for Link */
+  text-decoration: none;
+  color: white;
+}
+
+/* Tool cards hover */
+
+.url-scanner:hover,
+.email-cheacker:hover,
+.ip-tracker:hover,
+.password-strength:hover,
+.app-cheacker:hover {
+  background-color: #00304f;
+  transform: translateY(-2px);
+}
+
+/* Card heading */
+
+.url-scanner h2,
+.email-cheacker h2,
+.ip-tracker h2,
+.password-strength h2,
+.app-cheacker h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Card description */
+
+.url-scanner p,
+.email-cheacker p,
+.ip-tracker p,
+.password-strength p,
+.app-cheacker p {
+  color: #b8c5cf;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .tools {
+    width: 100vw;
+    padding: 30px 20px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .tools {
+    padding: 70px 15px 30px;
+  }
+
+  .tools-title {
+    font-size: 26px;
+  }
+
+  .url-scanner,
+  .email-cheacker,
+  .ip-tracker,
+  .password-strength,
+  .app-cheacker {
+    padding: 18px;
+    margin: 12px 0;
+  }
+
+  .url-scanner h2,
+  .email-cheacker h2,
+  .ip-tracker h2,
+  .password-strength h2,
+  .app-cheacker h2 {
+    font-size: 18px;
+  }
+
+  .url-scanner p,
+  .email-cheacker p,
+  .ip-tracker p,
+  .password-strength p,
+  .app-cheacker p {
+    font-size: 14px;
+  }
+}
