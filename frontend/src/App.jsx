@@ -20,7 +20,7 @@ function App() {
         {/* Tools */}
         <Route path="/tools" element={<Tools />} />
         <Route path="/url-scanner" element={<Url />} />
-        <Route path="/email-checker" element={<EmailChecker />} />
+        
       </Route>
 
     </Routes>
