@@ -35,7 +35,7 @@ app.post("/api/ask", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT;
+
 const MONGO_URI = process.env.MONGODB;
 
 const startServer = async () => {
@@ -44,9 +44,6 @@ const startServer = async () => {
 
     console.log("MongoDB connected successfully");
 
-    app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-    });
   } catch (error) {
     console.error("MongoDB connection failed:", error.message);
   }
