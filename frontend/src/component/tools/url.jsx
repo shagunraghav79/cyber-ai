@@ -68,7 +68,7 @@ function Url() {
     setResult(null);
 
     try {
-      const response = await fetch("http://localhost:5000/api/url/scan", {
+      const response = await fetch("https://cyber-ai-8pf5.vercel.app/api/url/scan", {
         method: "POST",
 
         headers: {
